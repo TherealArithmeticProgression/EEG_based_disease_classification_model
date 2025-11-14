@@ -9,6 +9,7 @@ Multi-class classification of neurological disorders using EEG electrode reading
 ## Overview
 
 This repository implements machine learning classifiers to predict neurological disorders from 32-channel EEG data combined with participant demographics (age, sex, education, IQ, EQ). The pipeline includes preprocessing, feature engineering, model training, and evaluation.
+Electroencephalography (EEG) is a non-invasive neurophysiological technique that measures the electrical activity of the brain by recording voltage fluctuations resulting from ionic current flows within neurons through electrodes placed on the scalp surface. The EEG signal reflects the summation of postsynaptic potentials from large populations of cortical pyramidal neurons firing synchronously, providing temporal resolution in the millisecond range that is essential for capturing the dynamic nature of neural processes. EEG electrode data reveals critical information about a patient's neurological status, including cortical function, sleep architecture, level of consciousness, and the presence of pathological activity such as epileptiform discharges, generalized or focal slowing, and asymmetries in brain activity. Clinically, EEG patterns enable the identification and classification of seizure disorders, the assessment of encephalopathies, the evaluation of brain death, the monitoring of sedation depth during anesthesia, and the detection of subtle abnormalities in conditions such as dementia, infections, metabolic disturbances, and structural brain lesions. The spatial distribution, frequency composition, amplitude characteristics, and reactivity of EEG rhythms provide complementary diagnostic information that, when interpreted within the appropriate clinical context, significantly contributes to patient diagnosis, treatment planning, and prognostic evaluation in neurological and psychiatric care.
 
 ## Dataset
 
@@ -20,8 +21,8 @@ The dataset contains:
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/eeg-classification.git
-cd eeg-classification
+git clone https://github.com/TherealArithmeticProgression/EEG_based_disease_classification_model
+cd EEG_based_disease_classification_model
 pip install -r requirements.txt
 ```
 
@@ -35,52 +36,13 @@ matplotlib
 seaborn
 ```
 
-## Usage
 
-### Preprocessing
-
-```python
-from src.preprocessing import preprocess_data
-
-# Load and preprocess
-X_train, X_test, y_train, y_test = preprocess_data('data/eeg_dataset.csv')
+### Outputs:
+ ```
+ - Confusion matrices
+ - Classification reports (precision, recall, F1-score)
+ - Classification visualized
 ```
-
-The preprocessing pipeline handles:
-1. Missing value imputation
-2. Categorical encoding (sex, education)
-3. Feature scaling (StandardScaler on continuous variables)
-4. Train-test split with stratification
-
-### Training
-
-```python
-from src.train import train_models
-
-# Train multiple classifiers
-models = train_models(X_train, y_train)
-```
-
-Implemented models:
-- Random Forest
-- Support Vector Machine (RBF kernel)
-- Multi-layer Perceptron
-
-### Evaluation
-
-```python
-from src.evaluate import evaluate_models
-
-# Generate metrics and visualizations
-results = evaluate_models(models, X_test, y_test)
-```
-
-Outputs:
-- Confusion matrices
-- Classification reports (precision, recall, F1-score)
-- Feature importance plots
-- EEG pattern visualizations by disorder
-
 ## Pipeline
 
 ```
@@ -102,82 +64,8 @@ Evaluation & Visualization
 ## Results
 
 | Model | Accuracy | F1-Score (Weighted) |
-|-------|----------|---------------------|
-| Random Forest | TBD | TBD |
-| SVM | TBD | TBD |
-| Neural Network | TBD | TBD |
-
-## Project Structure
 
 ```
-eeg-classification/
-├── data/
-│   └── eeg_dataset.csv
-├── src/
-│   ├── preprocessing.py      # Data cleaning and feature engineering
-│   ├── train.py              # Model training
-│   └── evaluate.py           # Metrics and visualization
-├── notebooks/
-│   └── exploration.ipynb     # Exploratory data analysis
-├── models/
-│   └── saved_models/         # Serialized trained models
-├── results/
-│   ├── figures/              # Generated plots
-│   └── metrics/              # Performance metrics
-├── requirements.txt
-├── README.md
-└── LICENSE
-```
-
-## Key Implementation Details
-
-### Feature Engineering
-
-```python
-# Statistical aggregations across electrodes
-df['EEG_mean'] = df.filter(like='EEG_Electrode').mean(axis=1)
-df['EEG_std'] = df.filter(like='EEG_Electrode').std(axis=1)
-df['EEG_max'] = df.filter(like='EEG_Electrode').max(axis=1)
-```
-
-### Handling Class Imbalance
-
-```python
-# Use class weighting in model training
-RandomForestClassifier(class_weight='balanced')
-```
-
-### Model Persistence
-
-```python
-import joblib
-
-# Save trained model
-joblib.dump(model, 'models/rf_classifier.pkl')
-
-# Load model
-model = joblib.load('models/rf_classifier.pkl')
-```
-
-## Hyperparameter Tuning
-
-Grid search configuration for Random Forest:
-
-```python
-param_grid = {
-    'n_estimators': [50, 100, 200],
-    'max_depth': [10, 20, None],
-    'min_samples_split': [2, 5, 10]
-}
-```
-
-## Visualization Examples
-
-The repository generates:
-- Feature importance rankings
-- Per-electrode mean amplitude by disorder
-- Confusion matrices for each classifier
-- ROC curves (for binary classification scenarios)
 
 ## Contributing
 
@@ -193,10 +81,10 @@ If you use this code in your research, please cite:
 
 ```bibtex
 @software{eeg_classification,
-  author = {Your Name},
+  author = {Akshar Pujara},
   title = {EEG-Based Disease Classification},
-  year = {2024},
-  url = {https://github.com/yourusername/eeg-classification}
+  year = {2025},
+  url = {https://github.com/TherealArithmeticProgression/EEG_based_disease_classification_model}
 }
 ```
 
