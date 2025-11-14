@@ -93,6 +93,7 @@ If you use this code in your research, please cite:
 ## Contact
 
 GitHub: [@TheRealArithmeticProgression](https://github.com/TheRealArithmeticProgression)
+LinkedIn: [@AksharPujara](https://www.linkedin.com/in/akshar2007/)
 
 ---
 
