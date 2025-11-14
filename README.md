@@ -9,7 +9,9 @@ Multi-class classification of neurological disorders using EEG electrode reading
 ## Overview
 
 This repository implements machine learning classifiers to predict neurological disorders from 32-channel EEG data combined with participant demographics (age, sex, education, IQ, EQ). The pipeline includes preprocessing, feature engineering, model training, and evaluation.
-Electroencephalography (EEG) is a non-invasive neurophysiological technique that measures the electrical activity of the brain by recording voltage fluctuations resulting from ionic current flows within neurons through electrodes placed on the scalp surface. The EEG signal reflects the summation of postsynaptic potentials from large populations of cortical pyramidal neurons firing synchronously, providing temporal resolution in the millisecond range that is essential for capturing the dynamic nature of neural processes. EEG electrode data reveals critical information about a patient's neurological status, including cortical function, sleep architecture, level of consciousness, and the presence of pathological activity such as epileptiform discharges, generalized or focal slowing, and asymmetries in brain activity. Clinically, EEG patterns enable the identification and classification of seizure disorders, the assessment of encephalopathies, the evaluation of brain death, the monitoring of sedation depth during anesthesia, and the detection of subtle abnormalities in conditions such as dementia, infections, metabolic disturbances, and structural brain lesions. The spatial distribution, frequency composition, amplitude characteristics, and reactivity of EEG rhythms provide complementary diagnostic information that, when interpreted within the appropriate clinical context, significantly contributes to patient diagnosis, treatment planning, and prognostic evaluation in neurological and psychiatric care.
+Electroencephalography (EEG) is a non-invasive neurophysiological technique that measures the electrical activity of the brain by recording voltage fluctuations resulting from ionic current flows within neurons through electrodes placed on the scalp surface. The EEG signal reflects the summation of postsynaptic potentials from large populations of cortical pyramidal neurons firing synchronously, providing temporal resolution in the millisecond range that is essential for capturing the dynamic nature of neural processes. 
+
+EEG electrode data reveals critical information about a patient's neurological status, including cortical function, sleep architecture, level of consciousness, and the presence of pathological activity such as epileptiform discharges, generalized or focal slowing, and asymmetries in brain activity. Clinically, EEG patterns enable the identification and classification of seizure disorders, the assessment of encephalopathies, the evaluation of brain death, the monitoring of sedation depth during anesthesia, and the detection of subtle abnormalities in conditions such as dementia, infections, metabolic disturbances, and structural brain lesions. The spatial distribution, frequency composition, amplitude characteristics, and reactivity of EEG rhythms provide complementary diagnostic information that, when interpreted within the appropriate clinical context, significantly contributes to patient diagnosis, treatment planning, and prognostic evaluation in neurological and psychiatric care.
 
 ## Dataset
 
@@ -39,9 +41,9 @@ seaborn
 
 ### Outputs:
  ```
- - Confusion matrices
- - Classification reports (precision, recall, F1-score)
- - Classification visualized
+ Confusion matrices
+ Classification reports (precision, recall, F1-score)
+ Classification visualized
 ```
 ## Pipeline
 
@@ -62,7 +64,7 @@ Evaluation & Visualization
 ```
 
 ## Results
-
+```
 | Model | Accuracy | F1-Score (Weighted) |
 
 ```
