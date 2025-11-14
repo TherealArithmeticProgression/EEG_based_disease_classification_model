@@ -1,1 +1,1 @@
-pip install pandas numpy scikit-learn matplotlib 
+pandas numpy scikit-learn matplotlib 
